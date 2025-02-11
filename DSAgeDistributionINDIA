@@ -1,0 +1,24 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Age Group': ['0-14', '15-64', '65+'],
+    'Percentage': [25.68, 67.49, 6.83]  # These percentages are taken from demographics_of_India
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+
+
+plt.figure(figsize=(8, 6))
+plt.bar(df['Age Group'], df['Percentage'], color='lightgreen', edgecolor='black')
+
+
+plt.xlabel('Age Group (male&female both)')
+plt.ylabel('Percentage of Population')
+plt.title('Age Distribution in India')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+
+plt.show()
